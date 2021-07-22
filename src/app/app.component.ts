@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PetserviceService } from './services/petservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'petapp';
+  picture;
+  bad = false
+  constructor(private petService : PetserviceService){}
+  
+  getPicture(){
+      this.petService.getPicture().subscribe(data => {this.picture = data; this.bad = true;})
+  }
 }
