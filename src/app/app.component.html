@@ -1,12 +1,28 @@
 <app-header></app-header>
 <br>
 <br>
-<h1 class="display-3 text-center" style="color: #00ff00"> Having a bad day?</h1>
-<div style="padding-top: 2em;" class="text-center"> 
-  <button style="margin-right: 1em;" class="btn btn-outline-primary" (click)="getPicture()">yes :(</button>
-  <button class="btn btn-outline-primary">nope!</button>
+<br>
+<br>
+<br>
+<div *ngIf="!bad; else elseBlock">
+<h1 class="display-3 text-center" style="color: #5d64e5"> Having a bad day?</h1>
+<h1 class="display-6 text-center pp" style="color: #00ff00"> Are dogs your thing?</h1>
+<div style="padding-top: 1em;" class="text-center"> 
+  <button style="margin-right: 1em;" class="btn btn-outline-primary btn-lg" (click)="getPicture()">yes!</button>
 </div>
+</div>
+<ng-template #elseBlock>
+  <h1 class="display-6 text-center pp" style="color: #00ff00"> Enjoy this fella..</h1>
+  <div style="padding-top: 1em;padding-bottom: 1em;" class="text-center"> 
+    <button style="margin-right: 1em;" class="btn btn-outline-primary btn-lg" (click)="getPicture()">more!</button>
+  </div>
+</ng-template>
+
+
 <br>
 <div *ngIf="bad">
-<img  src={{picture.message}} class="rounded mx-auto d-block" height="300" width="400" alt="">
+<img  src={{picture.message}} class="mx-auto d-block" height="350" width="350" alt="loading">
+
+
+
 </div>

@@ -1,0 +1,18 @@
+img{
+    border-radius: 180px;
+    border: 6px solid black;
+}
+.navbar{
+    min-height: 5em;
+    color: chartreuse;
+    background-color: #f0f1f0;
+    bottom: 0;
+   
+}
+
+.pp{
+    opacity: 0.5;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #5d64e5 !important;
+}
